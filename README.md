@@ -40,3 +40,10 @@ Wykonanie testów:
 ```bash
 sail artisan test --testsuite=Feature --stop-on-failure --env=testing
 ```
+
+W przypadku gdy Laravel nie może zapisać do pliku `storage/logs/laravel.log` należy nadać odpowiednie uprawnienia:
+
+```bash
+sudo chmod o+w ./storage/ -R
+sudo chown www-data:www-data -R ./storage
+```
